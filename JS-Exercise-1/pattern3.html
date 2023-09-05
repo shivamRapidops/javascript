@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>pattern 3</title>
+</head>
+<body>
+	<script>
+    	let n = prompt("enter number of rows",5);
+        if(n % 2 == 0){
+        	console.log("cannot be drawn for even input");
+        }
+        else{
+          let string = "";
+          let count = Math.floor(n/2);
+          for(let i=0; i<n; i++){
+            for(let j=0; j<n; j++){
+              if(j == Math.abs(count) || j == n-Math.abs(count)-1){
+                string += "* ";
+              }
+              else{
+                string += "  ";
+              }
+            }
+            count--;
+            string += "\n";
+          }
+          console.log(string);
+        }
+        
+    </script>
+</body>
+</html>
